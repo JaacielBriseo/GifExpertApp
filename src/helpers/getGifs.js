@@ -1,5 +1,5 @@
 export const getGifs = async (category) => {
-    const url = `https://api.giphy.com/v1/gifs/search?api_key=WzJeN4lm66uNKshaNibDOKCehTAqay3k&q=${category}&limit=20&offset=&rating=g&lang=en`;
+    const url = `https://api.giphy.com/v1/gifs/search?api_key=WzJeN4lm66uNKshaNibDOKCehTAqay3k&q=${category}&limit=5&offset=&rating=g&lang=en`;
   
     const resp = await fetch(url);
     const { data } = await resp.json();
@@ -8,6 +8,5 @@ export const getGifs = async (category) => {
       title: element.title,
       url: element.images.downsized_medium.url,
     }));
-    console.log(gifs);
     return gifs;
   };
