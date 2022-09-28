@@ -23,7 +23,6 @@ export const AddCategory = ({onNewCategory}) => {
         value={inputValue}
         onChange={onInputChange}
       />
-      <button>Add new</button>
     </form>
   );
 };
